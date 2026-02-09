@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 
-const TermsOfService = () => {
+const TermsOfServices = () => {
   return (
     <>
     <div className="relative z-10 min-h-screen px-6 py-15 text-white">
@@ -140,4 +140,4 @@ const TermsOfService = () => {
   );
 };
 
-export default TermsOfService;
+export default TermsOfServices;

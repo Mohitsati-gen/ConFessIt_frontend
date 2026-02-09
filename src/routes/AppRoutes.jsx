@@ -5,7 +5,7 @@ import Signup from "../pages/Signup";
 import SubmitConfession from "../pages/SubmitConfession";
 import ProtectedRoute from "../components/ProtectedRoute";
 import About from "../pages/About";
-import TermsOfService from "../pages/Termsofservices";
+import TermsOfServices from "../pages/TermsOfServices";
 
 const AppRoutes = () => {
   return (
@@ -14,7 +14,7 @@ const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/about" element={<About />} />
-      <Route path="/termsofservices" element={<TermsOfService/>} />
+      <Route path="/termsofservices" element={<TermsOfServices/>} />
       
 
       <Route
