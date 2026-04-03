@@ -1,16 +1,120 @@
-# React + Vite
+# 🌐 ConFessIt – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive frontend for an anonymous confession platform where users can share thoughts freely without revealing their identity.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [con-fess-it-frontend-z94p.vercel.app](https://con-fess-it-frontend-z94p.vercel.app)  
+🔗 **Backend Repo:** [ConFessIt-backend](https://github.com/Mohitsati-gen/ConFessIt-backend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔐 Authentication (Login / Signup)
+- 🔄 Persistent login using HTTP-only cookies
+- 🧠 Protected routes — only logged-in users can access features
+- ✍️ Submit anonymous confessions
+- 📜 Explore confession feed with category filtering & pagination
+- 🌌 Animated UI with star background (React Three Fiber)
+- 🔔 Toast notifications for real-time feedback
+- 📱 Fully responsive design
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | UI framework |
+| React Router DOM | Client-side routing |
+| Tailwind CSS | Styling |
+| Axios | HTTP client |
+| React Toastify | Toast notifications |
+| React Three Fiber | 3D animated star background |
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── pages/            # Route-level page components
+├── routes/           # Protected & public route wrappers
+├── context/          # Auth context (global state)
+├── services/         # Axios API call functions
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/Mohitsati-gen/ConFessIt_frontend.git
+cd ConFessIt_frontend
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Create `.env` file
+
+```env
+VITE_API_BASE_URL=http://localhost:8000/api
+```
+
+> Replace with your deployed backend URL in production.
+
+### 4. Run the app
+
+```bash
+npm run dev
+```
+
+App will run on `http://localhost:5173`
+
+---
+
+## 🔐 Authentication Flow
+
+- User logs in → backend sets **HTTP-only cookie** with access token
+- Cookies are automatically sent with every Axios request (`withCredentials: true`)
+- Auth state is managed globally using **React Context API**
+- Protected routes check auth state before rendering
+
+---
+
+## 📸 Screens
+
+- 🏠 Home Page
+- 🔑 Login / Signup
+- ✍️ Submit Confession
+- 📜 Explore Feed (with filters)
+
+---
+
+## 🌍 Deployment
+
+Deployed on **Vercel** — [Live Link](https://con-fess-it-frontend-z94p.vercel.app)
+
+---
+
+## ✨ Future Improvements
+
+- [ ] Dark / Light theme toggle
+- [ ] Real-time feed updates
+- [ ] AI content moderation
+- [ ] Like & comment system
+
+---
+
+## 👨‍💻 Author
+
+**Mohit Sati**  
+[GitHub](https://github.com/Mohitsati-gen) • [LinkedIn](https://www.linkedin.com/in/mohit-sati-061291313)
